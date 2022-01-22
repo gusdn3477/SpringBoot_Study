@@ -1,5 +1,6 @@
-package com.example.core;
+package com.example.core.discount;
 
+import com.example.core.RateDiscountPolicy;
 import com.example.core.member.Grade;
 import com.example.core.member.Member;
 import org.assertj.core.api.Assertions;
