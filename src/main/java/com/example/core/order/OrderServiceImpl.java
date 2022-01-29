@@ -11,6 +11,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class OrderServiceImpl implements OrderService{
 
+    // 수정자 주입을 포함한 나머지 주입 방식은 모두 생성자 이후에 호출되므로,
+    // 필드에 'final' 키워드를 사욯알 수 없다. 오직 생성자 주입 방식만 'final' 키워드를 사용할 수 있다.
+    // 항상 생성자 주입하기! 가끔 옵션이 필요한 겨우 수정자 주입 사옹. 필드는 X => 테스트 시에 값을 넣을 수 없음..
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
 
